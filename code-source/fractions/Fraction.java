@@ -61,6 +61,10 @@ public class Fraction {
         return new Fraction(-this.fractNumer, this.fractDenom);
     }
     
+    public Fraction reciprocal() {
+        return new Fraction(this.fractDenom, this.fractNumer);
+    }
+    
     @Override
     public String toString() {
         if (this.fractDenom == 1) {
@@ -113,10 +117,6 @@ public class Fraction {
     
     public double getNumericApproximation() {
         return ((double) this.fractNumer / (double) this.fractDenom);
-    }
-    
-    public Fraction reciprocal() {
-        return new Fraction(this.fractDenom, this.fractNumer);
     }
     
     // TODO: Write tests for the following cases: 5/4, 1, 1/15, 0, -3/2.
